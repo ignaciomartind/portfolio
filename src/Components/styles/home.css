@@ -1,0 +1,64 @@
+.home h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4rem;
+    animation: name-in 1000ms ease-out;
+}
+.home-dark h1{
+    color:#eabf9f;
+}
+.home-light h1{
+    color:#1e212d;
+}
+.home-content{
+    margin: 15rem auto;
+    text-align: left;
+    width: 50vw;
+    overflow: hidden;
+}
+.home-content p{
+    font-size: 8rem;
+    animation: home-text-in 1000ms ease-out forwards;
+    animation-delay: 1000ms;
+    transform: translateX(-1000px);
+    will-change: transform;
+}
+.home-text-light{
+    color:#1e212d;
+}
+.home-text-dark{
+    color: #eabf9f;
+}
+
+
+@keyframes name-in{
+    0%{
+        transform: translateY(-300px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes home-text-in{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
