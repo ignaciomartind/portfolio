@@ -20,7 +20,7 @@ h1,h2,h3,h4,a,p,li,input,button{
   position: absolute;
   left: 20px;
   bottom: 20px;
-  font-size: 4rem;
+  font-size: 3.2rem;
   cursor: pointer;
 }
 .bulb:active{

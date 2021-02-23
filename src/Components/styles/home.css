@@ -21,9 +21,9 @@
 }
 .home-content p{
     font-size: 8rem;
-    animation: home-text-in 1000ms ease-out forwards;
-    animation-delay: 1000ms;
-    transform: translateX(-1000px);
+    /* animation: home-text-in 1000ms ease-out forwards; */
+    /* animation-delay: 1000ms; */
+    /* transform: translateX(-1000px); */
     will-change: transform;
 }
 .home-text-light{

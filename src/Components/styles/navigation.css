@@ -1,0 +1,36 @@
+.nav{
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    right: 25%;
+}
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-nav{
+    font-size: 2.4rem;
+    padding: 1rem 3rem;
+    border-radius: 7px 7px 0 0;
+    transition: 130ms ease-out;
+}
+.btn-nav-light:hover{
+    background-color: #1e212d20;
+}
+.btn-nav-dark:hover{
+    background-color: #eabf9f10;
+}
+.btn-nav-light{
+    color:#1e212d
+}
+.btn-nav-dark{
+    color: #eabf9f
+}
+.btn-nav-selected-light{
+    background-color: #1e212d!important;
+    color: #eabf9f;
+}
+.btn-nav-selected-dark{
+    background-color: #eabf9f!important;
+    color: #1e212d;
+}
