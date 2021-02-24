@@ -70,6 +70,10 @@ function Home(props){
         setTimeout(() => {
             setAnimatedText('A Front-end developer.')
         }, 3100);
+        setTimeout(() => {
+            setAnimatedText('A Front-end developer.')
+        }, 3200);
+        
     },[])
 
     

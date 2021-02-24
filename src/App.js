@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
 
 import {faLightbulb} from '@fortawesome/free-solid-svg-icons'
 
@@ -17,10 +18,8 @@ import './App.css';
 function App() {
 
   const [theme, setTheme] = useState('dark')
-  const [selectedLink, setSelectedLink] = useState('Home')
-  const [section, setSection] = useState(<Home theme={theme}/>)
 
-  const menuLinks = ['Home', 'About', 'My work', 'Skills', 'VMV', 'Contact']
+  const menuLinks = ['Home', 'About', 'My-Work', 'Skills', 'VMV', 'Contact']
 
   function handleTheme(){
     
@@ -31,52 +30,47 @@ function App() {
       }
   }
 
-  function handleClick(e){
-    e.preventDefault()
-    
-    const link = e.target.getAttribute('data-key')
-
-    switch(link){
-      case 'Home': 
-        setSelectedLink(link)
-        return setSection(<Home theme={theme} />)
-      case 'About': 
-        setSelectedLink(link)
-        return setSection(<About theme={theme} />)
-        // break;
-      case 'My work': 
-        setSelectedLink(link)
-        return (<MyWork theme={theme} />)
-        // break;
-      case 'Skills': 
-        setSelectedLink(link)
-        return setSection(<Skills theme={theme} />)
-        // break;
-      case 'VMV': 
-        setSelectedLink(link)
-        return setSection(<VMV theme={theme} />)
-        // break;
-      case 'Contact': 
-        setSelectedLink(link)
-        return setSection(<Contact theme={theme} />)
-        // break;
-      default: 
-        return setSection(<NotFound theme={theme} />)
-        // break;
-    }
-
-  }
-
   return (
-    <div className={`App App-${theme}`}>
-      {section}
-      <div className="theme-button-container">
-        <button className="btn-theme">
-          <FontAwesomeIcon icon={faLightbulb} className={`bulb bulb-${theme}`} onClick={handleTheme}/>
-        </button> 
+    <BrowserRouter>
+      <div className={`App App-${theme}`}>
+
+        <Switch>
+          <Route exact path="/home">
+            <Home theme={theme} />
+          </Route>
+          <Route path="/about">
+            <About theme={theme} />
+          </Route>
+          <Route path="/my-work">
+            <MyWork theme={theme} />
+          </Route>
+          <Route path="/skills">
+            <Skills theme={theme} />
+          </Route>
+          <Route path="/vmv">
+            <VMV theme={theme} />
+          </Route>
+          <Route path="/contact">
+            <Contact theme={theme } />
+          </Route>
+          <Route path='/'>
+            <Redirect to='/home' />
+          </Route>
+          <Route>
+            <NotFound theme={theme} />
+          </Route>
+        </Switch>
+        
+
+          <div className="theme-button-container">
+              <button className="btn-theme">
+                  <FontAwesomeIcon icon={faLightbulb} className={`bulb bulb-${theme}`} onClick={handleTheme}/>
+              </button> 
+          </div>
+        <Navigation menuLinks={menuLinks} theme={theme}/>
+        
       </div>
-      <Navigation menuLinks={menuLinks} handleClick={handleClick} selectedLink={selectedLink} theme={theme}/>
-    </div>
+    </BrowserRouter>
   );
 }
 

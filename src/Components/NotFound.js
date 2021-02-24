@@ -1,3 +1,4 @@
+import './styles/notFound.css'
 
 function NotFound(props){
     

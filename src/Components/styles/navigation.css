@@ -1,6 +1,6 @@
 .nav{
     position: absolute;
-    bottom: 0;
+    bottom: 1rem;
     left: 25%;
     right: 25%;
 }
@@ -10,8 +10,8 @@
 }
 .btn-nav{
     font-size: 2.4rem;
-    padding: 1rem 3rem;
-    border-radius: 7px 7px 0 0;
+    padding: .5rem 2rem;
+    border-radius: 7px;
     transition: 130ms ease-out;
 }
 .btn-nav-light:hover{
@@ -26,11 +26,11 @@
 .btn-nav-dark{
     color: #eabf9f
 }
-.btn-nav-selected-light{
+.btn-nav-light.active{
     background-color: #1e212d!important;
     color: #eabf9f;
 }
-.btn-nav-selected-dark{
+.btn-nav-dark.active{
     background-color: #eabf9f!important;
     color: #1e212d;
 }
