@@ -35,7 +35,7 @@ function App() {
       <div className={`App App-${theme}`}>
 
         <Switch>
-          <Route exact path="/home">
+          <Route path="/home">
             <Home theme={theme} />
           </Route>
           <Route path="/about">

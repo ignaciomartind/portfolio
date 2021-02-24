@@ -6,7 +6,7 @@ function Navigation(props){
 
     return <nav className="nav">
         <ul>
-            {props.menuLinks.map(link => <NavLink to={`/${link}`} key={link} className={`btn-nav btn-nav-${props.theme}`} activeClassName='active'>{link}</NavLink> )}
+            {props.menuLinks.map(link => <NavLink to={`/${link}`} key={link} className={`btn-nav ${props.theme}`} activeClassName='active'>{link}</NavLink> )}
         </ul>
     </nav>
 }

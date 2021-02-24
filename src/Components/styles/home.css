@@ -4,7 +4,7 @@
     font-weight: 100;
     text-transform: uppercase;
     text-align: center;
-    padding: 4rem;
+    padding: 0rem;
     animation: name-in 1000ms ease-out;
 }
 .home-dark h1{
@@ -14,7 +14,7 @@
     color:#1e212d;
 }
 .home-content{
-    margin: 15rem auto;
+    margin: 10rem auto;
     text-align: left;
     width: 50vw;
     overflow: hidden;

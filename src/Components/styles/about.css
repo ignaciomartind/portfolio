@@ -1,0 +1,47 @@
+.about-content{
+    overflow: hidden;
+}
+.about-content p{
+    margin-top: 4rem;
+    text-align: justify;
+    position: relative;
+    padding: 1.4rem 0rem;
+}
+.about-content p::first-letter{
+    font-size: 3rem;
+    margin-left: 40px;
+}
+.ph-animation{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #eabf9f;
+}
+.ph-animation.light{
+    background-color: #1e212d;
+}
+.ph-animation.dark{
+    background-color: #eabf9f;
+}
+.pa1{
+    animation: phAppear 700ms ease-out forwards;
+    animation-delay: 1000ms;
+}
+.pa2{
+    animation: phAppear 700ms ease-out forwards;
+    animation-delay: 1700ms;
+}
+.pa3{
+    animation: phAppear 700ms ease-out forwards;
+    animation-delay: 2400ms;
+}
+@keyframes phAppear{
+    from{
+        top:0;
+    }
+    to{
+        top: calc(100% - 3px);
+    }
+}

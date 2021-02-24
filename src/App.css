@@ -8,6 +8,7 @@ h1,h2,h3,h4,a,p,li,input,button{
   height: 100vh;
   overflow: hidden;
   background-color: #1e212d;
+  padding: 7rem 25rem;
 }
 .App-light{
   background: linear-gradient(#eee0d5 80%, #ceb7a5);
@@ -31,4 +32,36 @@ h1,h2,h3,h4,a,p,li,input,button{
 }
 .bulb-light{
   color: #1e212d;
+}
+
+/***/
+
+.light{
+  color: #1e212d;
+}
+.dark{
+  color: #eabf9f;
+}
+
+
+
+/***/
+h2{
+  font-size: 4rem;
+  text-transform: uppercase;
+  animation: h2Appear 1000ms ease-out;
+}
+p{
+  font-size: 2rem;
+}
+
+
+
+@keyframes h2Appear{
+  from{
+    transform: translateY(-300px);
+  }
+  to{
+    transform: translateY(0);
+  }
 }
