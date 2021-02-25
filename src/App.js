@@ -35,22 +35,22 @@ function App() {
       <div className={`App App-${theme}`}>
 
         <Switch>
-          <Route path="/home">
+          <Route path="/Home">
             <Home theme={theme} />
           </Route>
-          <Route path="/about">
+          <Route path="/About">
             <About theme={theme} />
           </Route>
-          <Route path="/my-work">
+          <Route path="/My-Work">
             <MyWork theme={theme} />
           </Route>
-          <Route path="/skills">
+          <Route path="/Skills">
             <Skills theme={theme} />
           </Route>
-          <Route path="/vmv">
+          <Route path="/VMV">
             <VMV theme={theme} />
           </Route>
-          <Route path="/contact">
+          <Route path="/Contact">
             <Contact theme={theme } />
           </Route>
           <Route path='/'>
